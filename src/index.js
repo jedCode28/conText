@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter } from 'react-router-dom'
+// import * as serviceWorker from './serviceWorker';
+import AccountProvider from './components/AccountProvider';
 
 ReactDOM.render(
+  <AccountProvider>
   <BrowserRouter>
     <App />
   </BrowserRouter>,
+  </AccountProvider>,
   document.getElementById('root')
 );
 
@@ -18,3 +21,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+// serviceWorker.unregister();

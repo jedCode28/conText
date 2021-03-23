@@ -1,23 +1,20 @@
 import React, {useContext} from "react";
 import { Card, } from "semantic-ui-react";
-// import { AccountContext } from "../providers/AccountProvider";
+import { AccountContext, } from "./AccountProvider";
 
 const Account = () => {
-  //  const {username, membershipLevel, dateJoined} = useContext(AccountContext)
-
-    return (
-    <Card>
-        {/* <Card.Content>
-        <Card.Header>{username}</Card.Header>
-        <Card.Meta>
-            Date Joined: {dateJoined}
-        </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-        <p>Membership Level: {membershipLevel}</p>
-        </Card.Content> */}
-    </Card>
-    )
+        const {lastName, firstName, email} = useContext(AccountContext)
+        
+        return (
+        <Card>
+            <Card.Content>                          
+            <Card.Header>{firstName }{lastName}</Card.Header>
+            <Card.Meta>
+                Email: {email}
+            </Card.Meta>
+            </Card.Content>
+        </Card>
+        )
 }
 
 export default Account;

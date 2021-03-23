@@ -1,11 +1,13 @@
-import Account from "./Account"
+import React from 'react';
+import Account from "./Account";
+ 
 
 const AccountProfile = (props) => {
   return(
-    <div>
-    <p>AccountProfile</p>
+    <>
     <Account />
-    </div>
+    {/* <AccountForm /> */}
+    </>
   )
 }
-export default AccountProfile
+export default AccountProfile;

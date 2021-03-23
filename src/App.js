@@ -1,25 +1,32 @@
-import React, { Fragment, } from 'react';
+import React from 'react';
 import Navbar from "./components/Navbar";
 import AccountProfile from "./components/AccountProfile";
 import { Container, } from "semantic-ui-react";
 import { Switch, Route, } from "react-router-dom";
+import AccountForm from './components/AccountForm';
+
 const App = () => (
-  <Fragment>
+  <>
     <Navbar />
     <Container>
       <Switch>
         <Route
           exact
           path="/"
-          render={ () => <div>Home</div> }
+          render={ () => <h1>You're on the Home Page, It's Working </h1> }
         />
         <Route
           exact
           path="/account/profile"
           render={ () => <AccountProfile /> }
         />
+        <Route
+          exact
+          path="/AccountForm"
+          render={ () => <AccountForm /> }
+        />
       </Switch>
     </Container>
-  </Fragment>
+  </>
 )
 export default App;
