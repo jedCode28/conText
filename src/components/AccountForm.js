@@ -7,13 +7,16 @@ const AccountForm = (props) => {
   const [ user, setUser ] = useState({firstName, lastName, email, avatar })
 
   const handleChange = (e, { name, value }) => {
+    console.log('handleChange')
     setUser({
       ...user,
       [name]: value
     })
+    console.log(user.firstName)
   }
   const handleSubmit = (e) => {
     updateAccount({...user})
+    console.log('handleSubmit')
   }
 
   return(
@@ -41,7 +44,7 @@ const AccountForm = (props) => {
         name='email'
         onChange={handleChange}
       />
-      
+      <Form.Button>add</Form.Button>
     </Form>
     </>
   )

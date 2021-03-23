@@ -15,14 +15,14 @@ const Navbar = () => (
         <NavLink to="/account/profile">
           <Menu.Item>
             {/* Will be replaced with the actual username */}
-            Your Friends
+            Your Account
           </Menu.Item>
         </NavLink>
-        <NavLink to="/AccountForm">
+        {/* <NavLink to="/AccountForm">
           <Menu.Item>
             New User Form
           </Menu.Item>
-        </NavLink>
+        </NavLink> */}
       </Menu> 
     )}
   </AccountConsumer>
