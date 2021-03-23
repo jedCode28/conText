@@ -7,21 +7,17 @@ const AccountForm = (props) => {
   const [ user, setUser ] = useState({firstName, lastName, email, avatar })
 
   const handleChange = (e, { name, value }) => {
-    console.log('handleChange')
     setUser({
       ...user,
       [name]: value
     })
-    console.log(user.firstName)
   }
   const handleSubmit = (e) => {
     updateAccount({...user})
-    console.log('handleSubmit')
   }
 
   return(
     <>
-    <h1>{props.header}</h1>
     <Form onSubmit={handleSubmit}>
       <Form.Input 
         label="First Name"
@@ -42,6 +38,13 @@ const AccountForm = (props) => {
         value={user.email}
         type='email'
         name='email'
+        onChange={handleChange}
+      />
+      <Form.Input 
+        label="Profile Avatar"
+        value={user.avatar}
+        type='url'
+        name='avatar'
         onChange={handleChange}
       />
       <Form.Button>add</Form.Button>

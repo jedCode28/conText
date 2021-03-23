@@ -9,7 +9,6 @@ const AccountProvider = (props) => {
   const [initialLoading, setInitialLoading] = useState(true)
 
   useEffect(()=>{
-    console.log("in use effect accProv")
     setTimeout(()=>{
       getData()
     }, 1500)
@@ -19,7 +18,8 @@ const AccountProvider = (props) => {
     setAccount({
       firstName: "Nathan",
       lastName: "Explosion",
-      email: "bloodrecuted@dethklok.com"
+      email: "bloodrecuted@dethklok.com",
+      avatar: "https://pbs.twimg.com/profile_images/931860097151700992/ks5qfyQk_400x400.jpg"
     })
     setInitialLoading(false)
   }

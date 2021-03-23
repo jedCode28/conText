@@ -13,7 +13,7 @@ const App = () => (
         <Route
           exact
           path="/"
-          render={ () => <h1>You're on the Home Page, It's Working </h1> }
+          render={ () => <h1>Welcome to your Social Media Site </h1> }
         />
         <Route
           exact
