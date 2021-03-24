@@ -2,11 +2,12 @@ import React from "react";
 import { NavLink, } from "react-router-dom";
 import { Menu, } from "semantic-ui-react";
 import { AccountConsumer } from "./AccountProvider";
+import '../index.css';
 
 const Navbar = () => (
   <AccountConsumer>
     {(value) => (
-      <Menu>
+      <Menu style={{backgroundColor: "#cc9900"}}>
         <NavLink to="/">
           <Menu.Item>
             Home
@@ -14,15 +15,14 @@ const Navbar = () => (
         </NavLink>
         <NavLink to="/account/profile">
           <Menu.Item>
-            {/* Will be replaced with the actual username */}
             Your Account
           </Menu.Item>
         </NavLink>
-        {/* <NavLink to="/AccountForm">
+        <NavLink to="/Friends">
           <Menu.Item>
-            New User Form
+            View Friends' Activity
           </Menu.Item>
-        </NavLink> */}
+        </NavLink>
       </Menu> 
     )}
   </AccountConsumer>

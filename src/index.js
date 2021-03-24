@@ -10,9 +10,9 @@ import AccountProvider from './components/AccountProvider';
 
 ReactDOM.render(
   <AccountProvider>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
   </AccountProvider>,
   document.getElementById('root')
 );

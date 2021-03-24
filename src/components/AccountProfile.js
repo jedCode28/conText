@@ -1,6 +1,7 @@
 import React from 'react';
 import Account from "./Account";
 import AccountForm from './AccountForm';
+import '../index.css';
  
 
 const AccountProfile = (props) => {

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Form, } from "semantic-ui-react"
 import { AccountContext } from './AccountProvider'
+import '../index.css';
 
 const AccountForm = (props) => {
   const { firstName, lastName, email, avatar, updateAccount } = useContext(AccountContext)

@@ -1,13 +1,14 @@
 import React, {useContext} from "react";
 import { Card, Image, } from "semantic-ui-react";
 import { AccountContext, } from "./AccountProvider";
+import '../index.css';
 
 const Account = () => {
         const {lastName, firstName, email, avatar} = useContext(AccountContext)
         
         return (
-        <Card>
-            <Image src={avatar} wrapped ui={false}/>
+        <Card style={{backgroundColor: "#cc9900"}}>
+            <Image src={avatar} wrapped ui={false} />
             <Card.Content>                          
             <Card.Header>{firstName} {lastName}</Card.Header>
             <Card.Meta>

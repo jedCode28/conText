@@ -4,16 +4,20 @@ import AccountProfile from "./components/AccountProfile";
 import { Container, } from "semantic-ui-react";
 import { Switch, Route, } from "react-router-dom";
 import AccountForm from './components/AccountForm';
+import './index.css';
 
 const App = () => (
   <>
     <Navbar />
-    <Container>
+    <Container >
       <Switch>
         <Route
           exact
           path="/"
-          render={ () => <h1>Welcome to your Social Media Site </h1> }
+          render={ () => <>
+          <h1>Welcome to your Social Media Site </h1>
+          </>
+          }
         />
         <Route
           exact
@@ -24,6 +28,11 @@ const App = () => (
           exact
           path="/AccountForm"
           render={ () => <AccountForm /> }
+        />
+        <Route
+          exact
+          path="/Friends"
+          render={ () => <h2>Your Macbook is offline, please connect to the internet for further services.</h2> }
         />
       </Switch>
     </Container>
