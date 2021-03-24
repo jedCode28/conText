@@ -16,6 +16,7 @@ const App = () => (
           path="/"
           render={ () => <>
           <h1>Welcome to your Social Media Site </h1>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/SixDegrees.com_logo.png" />
           </>
           }
         />
@@ -32,7 +33,7 @@ const App = () => (
         <Route
           exact
           path="/Friends"
-          render={ () => <h2>Your Macbook is offline, please connect to the internet for further services.</h2> }
+          render={ () => <h2>@DaniDona88 your Macbook is offline, please connect to the internet for further services.</h2> }
         />
       </Switch>
     </Container>
